@@ -6,5 +6,20 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "server": "yarn workspace server start:dev",
+    "ssr": "yarn workspace ssr run dev",
+    "ssr:build": "yarn workspace ssr run build",
+    "ssr:start": "yarn workspace ssr run start",
+    "csr": "yarn workspace csr run dev",
+    "csr:build": "yarn workspace csr run build",
+    "csr:start": "yarn workspace csr run preview",
+    "ssg": "yarn workspace ssg run dev",
+    "ssg:build": "yarn workspace ssg run build",
+    "ssg:start": "yarn workspace ssg run start",
+    "rsc": "yarn workspace rsc run dev",
+    "rsc:build": "yarn workspace rsc run build",
+    "rsc:start": "yarn workspace rsc run start"
+  }
 }
