@@ -28,6 +28,16 @@ export class AppService {
     };
   }
 
+  async getSlowDataWithServerTime() {
+    await this.delay(3000);
+    const date = new Date();
+
+    return {
+      message: 'dummy api with api key',
+      data: `the slow api with 3 seconds delay. Server time: ${date.toLocaleDateString()} ${date.toLocaleTimeString()}`,
+    };
+  }
+
   async getSuperSlowData() {
     await this.delay(5000);
 

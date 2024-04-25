@@ -20,6 +20,11 @@ export class AppController {
     return this.appService.getSlowData();
   }
 
+  @Get('/slow/time')
+  getSlowWithTime() {
+    return this.appService.getSlowDataWithServerTime();
+  }
+
   @Get('/slowest')
   getSuperSlow() {
     return this.appService.getSuperSlowData();
