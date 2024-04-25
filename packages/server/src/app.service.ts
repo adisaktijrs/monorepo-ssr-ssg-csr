@@ -19,7 +19,25 @@ export class AppService {
     };
   }
 
+  async getSlowData() {
+    await this.delay(3000);
+
+    return {
+      message: 'dummy api with api key',
+      data: 'the slow api with 3 seconds delay.',
+    };
+  }
+
+  async getSuperSlowData() {
+    await this.delay(5000);
+
+    return {
+      message: 'dummy api with api key',
+      data: 'the slow api with 5 seconds delay.',
+    };
+  }
+
   async delay(time: number) {
-    return await new Promise((res) => setTimeout(() => res(''), time));
+    return await new Promise((res) => setTimeout(res, time));
   }
 }

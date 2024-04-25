@@ -14,4 +14,14 @@ export class AppController {
   getDataWithKey(@Query() query: Record<string, string>) {
     return this.appService.getDataWithKey(query.key);
   }
+
+  @Get('/slow')
+  getSlow() {
+    return this.appService.getSlowData();
+  }
+
+  @Get('/slowest')
+  getSuperSlow() {
+    return this.appService.getSuperSlowData();
+  }
 }
