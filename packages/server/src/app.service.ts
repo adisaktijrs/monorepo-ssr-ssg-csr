@@ -7,7 +7,7 @@ export class AppService {
   }
 
   async getDataWithKey(key: string) {
-    await this.delay(2000);
+    await this.delay(500);
 
     // so strong!
     if (key !== 'rahasianegara') {
